@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Test1s on touboli的妙妙屋</title>
-    <link>https://touboli.site/test1/</link>
+    <link>https://blog.touboli.site/test1/</link>
     <description>Recent content in Test1s on touboli的妙妙屋</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jun 2024 00:21:23 +0800</lastBuildDate>
-    <atom:link href="https://touboli.site/test1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.touboli.site/test1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2024</title>
-      <link>https://touboli.site/test1/2024/</link>
+      <link>https://blog.touboli.site/test1/2024/</link>
       <pubDate>Fri, 07 Jun 2024 00:21:23 +0800</pubDate>
-      <guid>https://touboli.site/test1/2024/</guid>
+      <guid>https://blog.touboli.site/test1/2024/</guid>
       <description>李大头是大帅比</description>
     </item>
   </channel>
