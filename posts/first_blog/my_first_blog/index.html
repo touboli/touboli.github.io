@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My_first_blog | touboli的妙妙屋</title>
+<meta name="keywords" content="">
+<meta name="description" content="前言 这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。
+博客搭建 首先说说博客搭建吧，我采用的方案是使用hugo&#43;github pages来进行博客搭建。
+hugo hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。
+对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。
+github pages github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。
+具体步骤 安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理
+hugo操作 hugo new site name
+在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。
+cd name
+进入name文件夹，可以进行进一步的工作了，文件夹的内容如下
+其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，官方文档在这里，可以进行自定义配置。
+hugo new my-first-post.md
+这会在content/posts 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。
+hugo
+控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。
+hugo server -D
+启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。
+更多的有关内容可以查看hugo的文档
+github pages操作 点击仓库的settings，找到pages部分，将DNS部分添加为域名即可
+结合hugo &#43; github pages 将hugo的public文件夹和创建的github pages关联起来，使用git完成
+在public目录下执行以下命令
+git init
+在当前目录下新建代码库
+git remote add origin github的仓库链接
+连接远程仓库
+git branch
+查看本地所有分支
+git branch -a
+查看远程所有分支
+git checkout main
+切换分支到main分支
+git add .
+添加所有文件到暂存区">
+<meta name="author" content="">
+<link rel="canonical" href="https://blog.touboli.site/posts/first_blog/my_first_blog/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4599eadb9eb2ad3d0a8d6827b41a8fda8f2f4af226b63466c09c5fddbc8706b7.css" integrity="sha256-RZnq256yrT0KjWgntBqP2o8vSvImtjRmwJxf3byHBrc=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.touboli.site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.touboli.site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.touboli.site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.touboli.site/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.touboli.site/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.touboli.site/posts/first_blog/my_first_blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="My_first_blog" />
+<meta property="og:description" content="前言 这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。
+博客搭建 首先说说博客搭建吧，我采用的方案是使用hugo&#43;github pages来进行博客搭建。
+hugo hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。
+对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。
+github pages github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。
+具体步骤 安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理
+hugo操作 hugo new site name
+在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。
+cd name
+进入name文件夹，可以进行进一步的工作了，文件夹的内容如下
+其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，官方文档在这里，可以进行自定义配置。
+hugo new my-first-post.md
+这会在content/posts 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。
+hugo
+控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。
+hugo server -D
+启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。
+更多的有关内容可以查看hugo的文档
+github pages操作 点击仓库的settings，找到pages部分，将DNS部分添加为域名即可
+结合hugo &#43; github pages 将hugo的public文件夹和创建的github pages关联起来，使用git完成
+在public目录下执行以下命令
+git init
+在当前目录下新建代码库
+git remote add origin github的仓库链接
+连接远程仓库
+git branch
+查看本地所有分支
+git branch -a
+查看远程所有分支
+git checkout main
+切换分支到main分支
+git add .
+添加所有文件到暂存区" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.touboli.site/posts/first_blog/my_first_blog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-08T14:29:14+08:00" />
+<meta property="article:modified_time" content="2024-06-08T14:29:14+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My_first_blog"/>
+<meta name="twitter:description" content="前言 这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。
+博客搭建 首先说说博客搭建吧，我采用的方案是使用hugo&#43;github pages来进行博客搭建。
+hugo hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。
+对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。
+github pages github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。
+具体步骤 安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理
+hugo操作 hugo new site name
+在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。
+cd name
+进入name文件夹，可以进行进一步的工作了，文件夹的内容如下
+其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，官方文档在这里，可以进行自定义配置。
+hugo new my-first-post.md
+这会在content/posts 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。
+hugo
+控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。
+hugo server -D
+启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。
+更多的有关内容可以查看hugo的文档
+github pages操作 点击仓库的settings，找到pages部分，将DNS部分添加为域名即可
+结合hugo &#43; github pages 将hugo的public文件夹和创建的github pages关联起来，使用git完成
+在public目录下执行以下命令
+git init
+在当前目录下新建代码库
+git remote add origin github的仓库链接
+连接远程仓库
+git branch
+查看本地所有分支
+git branch -a
+查看远程所有分支
+git checkout main
+切换分支到main分支
+git add .
+添加所有文件到暂存区"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.touboli.site/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "My_first_blog",
+      "item": "https://blog.touboli.site/posts/first_blog/my_first_blog/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My_first_blog",
+  "name": "My_first_blog",
+  "description": "前言 这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。\n博客搭建 首先说说博客搭建吧，我采用的方案是使用hugo+github pages来进行博客搭建。\nhugo hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。\n对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。\ngithub pages github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。\n具体步骤 安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理\nhugo操作 hugo new site name\n在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。\ncd name\n进入name文件夹，可以进行进一步的工作了，文件夹的内容如下\n其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，官方文档在这里，可以进行自定义配置。\nhugo new my-first-post.md\n这会在content/posts 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。\nhugo\n控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。\nhugo server -D\n启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。\n更多的有关内容可以查看hugo的文档\ngithub pages操作 点击仓库的settings，找到pages部分，将DNS部分添加为域名即可\n结合hugo + github pages 将hugo的public文件夹和创建的github pages关联起来，使用git完成\n在public目录下执行以下命令\ngit init\n在当前目录下新建代码库\ngit remote add origin github的仓库链接\n连接远程仓库\ngit branch\n查看本地所有分支\ngit branch -a\n查看远程所有分支\ngit checkout main\n切换分支到main分支\ngit add .\n添加所有文件到暂存区",
+  "keywords": [
+    
+  ],
+  "articleBody": "前言 这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。\n博客搭建 首先说说博客搭建吧，我采用的方案是使用hugo+github pages来进行博客搭建。\nhugo hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。\n对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。\ngithub pages github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。\n具体步骤 安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理\nhugo操作 hugo new site name\n在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。\ncd name\n进入name文件夹，可以进行进一步的工作了，文件夹的内容如下\n其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，官方文档在这里，可以进行自定义配置。\nhugo new my-first-post.md\n这会在content/posts 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。\nhugo\n控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。\nhugo server -D\n启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。\n更多的有关内容可以查看hugo的文档\ngithub pages操作 点击仓库的settings，找到pages部分，将DNS部分添加为域名即可\n结合hugo + github pages 将hugo的public文件夹和创建的github pages关联起来，使用git完成\n在public目录下执行以下命令\ngit init\n在当前目录下新建代码库\ngit remote add origin github的仓库链接\n连接远程仓库\ngit branch\n查看本地所有分支\ngit branch -a\n查看远程所有分支\ngit checkout main\n切换分支到main分支\ngit add .\n添加所有文件到暂存区\ngit commit -m \"提交备注\"\n提交暂存区到仓库区\ngit pull origin main\n拉取远程仓库main分支内容进行数据同步\ngit push origin main\n上传本地指定分支到远程仓库\n然后就可以通过域名进行访问了\n美食 这周周五去吃了羊蝎子自助，是老冯烤羊蝎子馆周年庆活动，从2024年5月30日到2024年6月30日，优惠卷后再叠加其他的优惠后为50元左右，跟同学一起去吃，生意非常的火爆，6点半等到8点半才有位置，味道不错，可以进行二次的吃。\n思考 情景如下，舍友三个人一起出去自驾游，去租车公司进行租车，费用均摊，包括油费，高速费等等，但是路上出现了意外，驾驶汽车的同学闯红灯了，扣分加扣费，分是自己承担，费用均摊，就这么一个问题，三个同学产生了分歧，同学A是驾车同学，觉得罚款的费用需要均摊，同学B和同学A关系好，也不计较，表示可以，同学C认为这不是他的责任，是同学A的驾驶技能不过关，表示不支持均摊，而是同学A个人承担。这件事情同学C来问我的意见。\n就这件事情本身而言，我是持中立态度，支付和不支付都有利用，首先是支付角度，因为同学A属于是主动承担驾驶风险，并且没有额外的收益，大家的费用是均摊的，相当于同学A是免费当司机，这本身是不合理的，所以从这个角度来说分摊是比较合理的，相当于用罚款的钱来支付驾驶费用。\n不支付的理由也很简单，驾驶员技能不过关造成的错误自己承担，并且这里还有一个额外信息，同学C是没有驾照的，不能很好的进行提醒，也就是不具备分摊责任的可能。\n综上所述，其实是否均摊都各有各的理由，还是建议在开始之前就确定好是怎么处理此类事件，是多给司机角色更多的钱，自己担责呢？还是不给司机钱，分摊责任？应该事先确定好才是。\n",
+  "wordCount" : "93",
+  "inLanguage": "en",
+  "datePublished": "2024-06-08T14:29:14+08:00",
+  "dateModified": "2024-06-08T14:29:14+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.touboli.site/posts/first_blog/my_first_blog/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "touboli的妙妙屋",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.touboli.site/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.touboli.site/" accesskey="h" title="touboli的妙妙屋 (Alt + H)">touboli的妙妙屋</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      My_first_blog
+    </h1>
+    <div class="post-meta"><span title='2024-06-08 14:29:14 +0800 CST'>June 8, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h1>
+<p>这是我的第一篇博客，以后会以一周一次的频率进行更新，主要内容是进行一周的总结，包括但不限于娱乐，比较好玩的事情，值得思考的东西，好用的软件，写的看的代码等等，是一个比较杂的博客，也并不会变成public，只是为了自己和朋友能看一看。如果有什么不准确的地方，请多多包涵，指出也是可以的，但是不合理的建议我会虚心接受，坚决不改的。</p>
+<h1 id="博客搭建">博客搭建<a hidden class="anchor" aria-hidden="true" href="#博客搭建">#</a></h1>
+<p>首先说说博客搭建吧，我采用的方案是使用hugo+github pages来进行博客搭建。</p>
+<h2 id="hugo">hugo<a hidden class="anchor" aria-hidden="true" href="#hugo">#</a></h2>
+<p>hugo官方是称自己是世界上用于构建网站最快的架构，并且给出了很多网站模版给用户使用，全部都是免费开源的模版，这点我是比较喜欢的。</p>
+<p>对我搭建博客来说，它的功能就是将我的markdown文档转化为html文件，构建成为了静态网页的内容。</p>
+<h2 id="github-pages">github pages<a hidden class="anchor" aria-hidden="true" href="#github-pages">#</a></h2>
+<p>github pages是github出的一个静态网页管理器，这个特性是非常适合用于管理hugo生成的静态网页的内容的，而且可以用户给出自定义域，那我的域名又可以用上了，非常舒服，touboli.site再次启动。</p>
+<h2 id="具体步骤">具体步骤<a hidden class="anchor" aria-hidden="true" href="#具体步骤">#</a></h2>
+<p>安装hugo，在github上建一个username.github.io的库，使用cloudflare将域名进行处理</p>
+<h3 id="hugo操作">hugo操作<a hidden class="anchor" aria-hidden="true" href="#hugo操作">#</a></h3>
+<p><code>hugo new site name</code></p>
+<p>在当前目录中产生一个名字为name的文件夹，里面是hugo的相关文件夹。有些地方把这种操作成为创建站点。</p>
+<p><code>cd name</code></p>
+<p>进入name文件夹，可以进行进一步的工作了，文件夹的内容如下</p>
+<p><img loading="lazy" src="/img/hugo.jpg" alt="文件夹内容"  />
+</p>
+<p>其中主要用到的文件夹是content文件夹，写的文章都是放在这里content/post文件夹中；themes文件夹，使用的网页模版来自于themes文件夹，我主要使用hugo-PaperMod模版；public，存放hugo根据content中的文章生成的静态网页；hugo.toml，hugo的配置文件，<a href="https://gohugo.io/getting-started/configuration/">官方文档在这里</a>，可以进行自定义配置。</p>
+<p><code>hugo new my-first-post.md</code></p>
+<p>这会在<code>content/posts</code> 目录中创建该文件，在这个文件中初始会有title信息，date信息，draft信息，一般来说hugo在构建网站时不会发布草稿内容。</p>
+<p><code>hugo</code></p>
+<p>控制台输入hugo命令会转化你写的markdown文档为静态网页，生成的静态网页存放到public文件夹中。</p>
+<p><code>hugo server -D</code></p>
+<p>启动hugo的开发服务器来查看网站，在终端会显示URL。访问可以查看效果。</p>
+<p>更多的有关内容可以查看<a href="https://hugo.opendocs.io/getting-started/quick-start/">hugo的文档</a></p>
+<h3 id="github-pages操作">github pages操作<a hidden class="anchor" aria-hidden="true" href="#github-pages操作">#</a></h3>
+<p>点击仓库的settings，找到pages部分，将DNS部分添加为域名即可</p>
+<h3 id="结合hugo--github-pages">结合hugo + github pages<a hidden class="anchor" aria-hidden="true" href="#结合hugo--github-pages">#</a></h3>
+<p>将hugo的public文件夹和创建的github pages关联起来，使用git完成</p>
+<p>在public目录下执行以下命令</p>
+<p><code>git init</code></p>
+<p>在当前目录下新建代码库</p>
+<p><code>git remote add origin github的仓库链接</code></p>
+<p>连接远程仓库</p>
+<p><code>git branch</code></p>
+<p>查看本地所有分支</p>
+<p><code>git branch -a</code></p>
+<p>查看远程所有分支</p>
+<p><code>git checkout main</code></p>
+<p>切换分支到main分支</p>
+<p><code>git add .</code></p>
+<p>添加所有文件到暂存区</p>
+<p><code>git commit -m &quot;提交备注&quot;</code></p>
+<p>提交暂存区到仓库区</p>
+<p><code>git pull origin main</code></p>
+<p>拉取远程仓库main分支内容进行数据同步</p>
+<p><code>git push origin main</code></p>
+<p>上传本地指定分支到远程仓库</p>
+<p>然后就可以通过域名进行访问了</p>
+<h2 id="美食">美食<a hidden class="anchor" aria-hidden="true" href="#美食">#</a></h2>
+<p>这周周五去吃了羊蝎子自助，是老冯烤羊蝎子馆周年庆活动，从2024年5月30日到2024年6月30日，优惠卷后再叠加其他的优惠后为50元左右，跟同学一起去吃，生意非常的火爆，6点半等到8点半才有位置，味道不错，可以进行二次的吃。</p>
+<p><img loading="lazy" src="/img/1.jpg" alt="羊蝎子1"  />
+</p>
+<p><img loading="lazy" src="/img/2.jpg" alt="羊蝎子2"  />
+</p>
+<h2 id="思考">思考<a hidden class="anchor" aria-hidden="true" href="#思考">#</a></h2>
+<p>情景如下，舍友三个人一起出去自驾游，去租车公司进行租车，费用均摊，包括油费，高速费等等，但是路上出现了意外，驾驶汽车的同学闯红灯了，扣分加扣费，分是自己承担，费用均摊，就这么一个问题，三个同学产生了分歧，同学A是驾车同学，觉得罚款的费用需要均摊，同学B和同学A关系好，也不计较，表示可以，同学C认为这不是他的责任，是同学A的驾驶技能不过关，表示不支持均摊，而是同学A个人承担。这件事情同学C来问我的意见。</p>
+<p>就这件事情本身而言，我是持中立态度，支付和不支付都有利用，首先是支付角度，因为同学A属于是主动承担驾驶风险，并且没有额外的收益，大家的费用是均摊的，相当于同学A是免费当司机，这本身是不合理的，所以从这个角度来说分摊是比较合理的，相当于用罚款的钱来支付驾驶费用。</p>
+<p>不支付的理由也很简单，驾驶员技能不过关造成的错误自己承担，并且这里还有一个额外信息，同学C是没有驾照的，不能很好的进行提醒，也就是不具备分摊责任的可能。</p>
+<p>综上所述，其实是否均摊都各有各的理由，还是建议在开始之前就确定好是怎么处理此类事件，是多给司机角色更多的钱，自己担责呢？还是不给司机钱，分摊责任？应该事先确定好才是。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://blog.touboli.site/">touboli的妙妙屋</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
