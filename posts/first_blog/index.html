@@ -309,7 +309,7 @@ github pages操作 点击仓库的settings，找到pages部分，将DNS部分添
 </span></span></code></pre></div><p>原理是在<a href="https://jincheng9.github.io/post/hugo-add-img/">这个博客</a>里有说，不过经过实测发现，这种方式只能是运行hugo server以后在本地可以看到图片，将文件传送到github仓库访问依旧不会显示图片，我也不太清楚是否是我操作问题，或者说是版本更新迭代以后这种方式不可用了？确实也不清楚，但可以尝试。</p>
 <h4 id="第二种本地图片插入方式成功">第二种本地图片插入方式（成功）<a hidden class="anchor" aria-hidden="true" href="#第二种本地图片插入方式成功">#</a></h4>
 <p>具体操作方式是将md文件和引用的图片放在一个文件夹下，将md文件改名为index.md，引用方式就是直接使用相对路径进行引用，举一个例子，对于如下目录结构，使用<code>![目录结构](/img/example.png)</code>进行引用，相关的博客链接放在<a href="https://www.bilibili.com/video/BV1qt411j7fV/?spm_id_from=333.934.0.0&amp;vd_source=1b6a09f6a14e1cd87622ff75730e0e32">这里</a>，可以自行观看，其中也有建立步骤，注意图片名字不要包含中文，要不然还是不能识别到</p>
-<p><img loading="lazy" src="/img/3.png" alt="目录结构"  />
+<p><img loading="lazy" src="/img/3.jpg" alt="目录结构"  />
 </p>
 <p>然后就可以通过域名进行访问了，后续的升级扩展思路在于使用github actions来实现自动化部署，或者利用服务器进行静态网页的存放和展示。</p>
 <h2 id="项目开发">项目开发<a hidden class="anchor" aria-hidden="true" href="#项目开发">#</a></h2>
